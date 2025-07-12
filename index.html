@@ -135,7 +135,13 @@
 
 
 <footer>
-    <p>Last modified: July 2025.</p>
+    <p id="last-modified"></p>
+    <script>
+        const lastModified = new Date(document.lastModified);
+        const options = { year: 'numeric', month: 'long' };
+        document.getElementById('last-modified').textContent = 
+            'Last modified: ' + lastModified.toLocaleDateString(undefined, options);
+    </script>
 </footer>
 
 </body>
